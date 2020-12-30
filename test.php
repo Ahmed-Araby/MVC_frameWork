@@ -1,8 +1,18 @@
 <?php
+/**
+ * class_exists
+ * is_callable
+ */
+
+function fun($x, $y)
+{
+    echo $x . " "  . $y;
+}
 
 
-$reg = "/\//";
-$str = "ahmed / araby ";
-echo preg_match($reg,$str, $match);
+call_user_func_array('fun', ["y"=>1, 
+                                "x"=>2]);
 
-print_r($match);
+require_once "Mvc/Controllers/Users.php"; // \ or // could be used as path seprator.
+$obj = new Mvc\Controllers\Users();
+var_dump($obj);

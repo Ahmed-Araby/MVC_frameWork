@@ -3,7 +3,9 @@
  * we could use {} to enclose url variables
  * I did it with dataType:VarName
  */
-require_once "../Mvc/Controllers/Users.php";
+
+namespace Core;
+require_once __DIR__ . "\\..\\autoload.php";
 
 class Router
 {
@@ -163,10 +165,7 @@ class Router
          */
 
         // call the controller in the charge
-        echo "action parameters <br>";
-        print_r($actionParms);
-        
-        $controllerObj = new $class();
+        $controllerObj = new $class(); //new \Mvc\Controllers\Users();
         $controllerObj->$action();
     }
 
@@ -175,7 +174,7 @@ class Router
     {
         if(!isset($parms['controller']) || 
         !isset($parms['action']) ){
-            throw new Exception("parms for route " . $route ." is not formated probably");
+            throw new \Exception("parms for route " . $route ." is not formated probably");
         }
 
         $this->getTable[$route] = $parms;
@@ -185,7 +184,7 @@ class Router
     {
         if(!isset($parms['controller']) || 
         !isset($parms['action']) ){
-            throw new Exception("parms for route " . $route ." is not formated probably");
+            throw new \Exception("parms for route " . $route ." is not formated probably");
         }
 
         $this->postTable[$route] = $parms;

@@ -1,5 +1,8 @@
 <?php 
 
+
+namespace Mvc\Controllers;
+require_once __DIR__ . "\\..\\..\\autoload.php";
 class Users
 {
 

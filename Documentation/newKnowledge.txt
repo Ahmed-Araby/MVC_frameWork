@@ -72,3 +72,28 @@ built in functions for regular expression operations:
 matches  -- will have the first string that matches our regex.
 
 **************************************
+
+
+nameSpaces:
+php looks for classes relative to the current namespace 
+namespace app;
+
+x= new dateTime(); // php will see it as new app\dateTime as if class date time is inside app namespace
+
+auto loading make use of 
+folders directory that matches with the namespace
+one class per file 
+class name is the same as the file name
+
+
+in auto loading -- the loading is happining relative to the position of the autoloader file.
+
+
+when working with files that have include/require using the command line 
+the relative path of the command line affect the path of the require/include    
+
+
+include_once __DIR__ . "\..\autoload.php";
+this allow you to include the path always relative to the absolute path of the 
+calling file.
+

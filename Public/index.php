@@ -9,7 +9,10 @@
  * 
  * this file is our app entry point
  * echo "this is the public folder of my website <br>";
+ * 
 */
+
+
 /*
 foreach($_SERVER as $key => $value)
 {
@@ -18,14 +21,15 @@ foreach($_SERVER as $key => $value)
 }
 */
 
-require_once "../Core/Router.php";
-$router = new Router();
+require_once __DIR__ . "/../autoload.php";
+
+$router = new Core\Router();
 
 // register get routes 
-$router->get('/users/int:id/color/int:age', ["controller" => "Users",
+$router->get('/users/int:id/color/int:age', ["controller" => "\\Mvc\\Controllers\\Users",
                                 "action" =>"getUser"]);
 
-$router->post('/users', ["controller" => "Users",
+$router->get('/users', ["controller" => "Mvc\\Controllers\\Users",
                                 "action" =>"postUser"]);
 
 /*
