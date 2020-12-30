@@ -2,3 +2,73 @@
 https://stackoverflow.com/questions/2030906/are-arrays-in-php-copied-as-value-or-as-reference-to-new-variables-and-when-pas#:~:text=With%20regards%20to%20your%20first,only%20the%20copy%20is%20modified.
 
 # use clone to copy objects
+
+
+**************************************
+regular expressions:
+"/expression/"
+
+meta character:
+\d -- match only one digits 
+\w -- match only one of a-z or A-Z or 0-9 
+\s -- match only one of white space char (space, tap) 
+
+special characters:
+^ -- start of the string 
+$ -- end of the string
+* after a char -- repeated 0 or more.
++ after a char -- repeated 1 or more 
+.  -- matches any single character (letter, number, white space .. etc)
+.* -- wild card match --- match any thing any number of times or zero times.
+\ -- scape a special character if we want to match it as a normal character.
+
+notes:
+regeular expressions are case sensitive.
+adding "i" after the regex  will make the match case insensitive.
+like this --> $reg = "/^abc/i";
+
+"i" after the regx is called a modifier.
+
+
+character sets and ranges:
+[] -- denote a character set 
+this will match any of the characters inside the [] 
+it is also to compine it with repeation characters (*, +)
+[1-5]  -- match any character inside the range.
+[0-9a-z]  -- more than 1 possible range to search in.
+[^123]  -- negated char set , this will match any expect 123
+[^0-9]  -- will not match any digits.
+
+capture Groups:
+extracts parts of the strings using regular expression.
+() --- define a group to be extracted during the matching of the expression.
+
+named capture groups:
+(?<name>regexPart to be named)  -- this a named group that could be inside a bigger regex.
+
+replacements:
+using preg_replace();
+
+backreference to capture group -- refere to the capture group by its occurance:
+\1 -- first one 
+\2 -- second one
+\n --- such that n is the number of groups in the matching groups of my regex, as they all have to be found 
+at the same time to say that I have a match.
+https://stackoverflow.com/questions/29722700/named-regular-expression-back-reference-in-php
+
+special chars:
+{ 
+}
+\
+/  -- forward slash is a special character for regex pattern as the pattern itself enclosed whithin 
+        forward slashes.
+        
+
+so we need to scape them
+
+and so on.
+built in functions for regular expression operations:
+1- preg_match(, , $matches)
+matches  -- will have the first string that matches our regex.
+
+**************************************

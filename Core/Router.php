@@ -1,5 +1,8 @@
 <?php 
-
+/**
+ * we could use {} to enclose url variables
+ * I did it with dataType:VarName
+ */
 require_once "../Mvc/Controllers/Users.php";
 
 class Router
