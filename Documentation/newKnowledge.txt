@@ -1,0 +1,4 @@
+# how php deal with passing arrays to functions (lazy copy, copy on right).
+https://stackoverflow.com/questions/2030906/are-arrays-in-php-copied-as-value-or-as-reference-to-new-variables-and-when-pas#:~:text=With%20regards%20to%20your%20first,only%20the%20copy%20is%20modified.
+
+# use clone to copy objects

@@ -1,0 +1,11 @@
+
+I use capital camle case style as naming convention
+
+front controllers, static files are (css, js, images ... etc)
+
+configure the root to be the public folder not the
+root folder of he project inside the htdocs file.
+
+
+
+

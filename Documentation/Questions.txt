@@ -1,0 +1,7 @@
+Q1/ how to reconfigure the root directory to my xampp webserver so that it 
+    will directly map to my website folder insnide htdocs or any other directory.
+
+
+Q2/ 
+
+
