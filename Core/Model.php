@@ -7,7 +7,7 @@ use PDO;
  * using singlton pattern
  * 
  */
- class pdoFactory
+ class Model
  {
      
     private static $pdo     = null;

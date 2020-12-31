@@ -1,10 +1,12 @@
 <?php 
 namespace Mvc\Models;
 
+use Core\Model;
+
 require_once __DIR__ . "\\..\\..\\vendor\\autoload.php";
 
 
-class UsersModel
+class UsersModel extends Model
 {
     function __construct()
     {
@@ -12,7 +14,7 @@ class UsersModel
 
     function getUsers()
     {
-        $pdo = \Core\pdoFactory::getPdoInstance();
+        $pdo = self::getPdoInstance();
         $query = "select * from users";
         $resSet = $pdo->query($query);
 
