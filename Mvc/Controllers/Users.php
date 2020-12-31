@@ -5,7 +5,6 @@ namespace Mvc\Controllers;
 use Core\View;
 
 require_once __DIR__ . "\\..\\..\\autoload.php";
-require_once __DIR__ . "\\..\\..\\vendor\\autoload.php";
 
 class Users extends \Core\Controller
 {
@@ -42,17 +41,16 @@ class Users extends \Core\Controller
          */
         echo "getUSers inside users class <br> <br>";
         
-        /*
+        
         $viewObj = new View();
+        
+        /*
         $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
         */
 
         // using twig template engine.
-        $pathToTemplates = __DIR__ . "\\..\\Views";
+        $viewObj->twigRender("home.html", $this->parms);
 
-        $loader = new \Twig\Loader\FilesystemLoader($pathToTemplates);
-        $twig = new \Twig\Environment($loader);
-        echo $twig->render('index.html', $this->parms);
 
     }
 

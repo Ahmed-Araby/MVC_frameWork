@@ -2,10 +2,12 @@
 
 function autoload($className)
 {
+    
     /*
     echo "class name " . $className;
-    echo "<br>";*/
-    
+    echo "<br>";
+    */
+
     $className = str_replace("/", "\\", $className);
     $filePath = __DIR__ . "\\" . $className . ".php";
     

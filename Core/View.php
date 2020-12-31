@@ -1,6 +1,10 @@
 <?php 
 
 namespace Core;
+
+require_once __DIR__ . "\\..\\vendor\\autoload.php";
+
+
 class View
 {
     function render($view, $args)
@@ -25,7 +29,11 @@ class View
 
     function twigRender($view, $args)
     {
-        
+        $pathToTemplates = __DIR__ . "\\..\\Mvc\\Views";
+
+        $loader = new \Twig\Loader\FilesystemLoader($pathToTemplates);
+        $twig = new \Twig\Environment($loader);
+        echo $twig->render($view, $args);
     }
 
 }
