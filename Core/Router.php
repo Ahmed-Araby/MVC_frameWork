@@ -76,13 +76,13 @@ class Router
         {
             if($regRouteL[$index] != $reqRouteL[$index]){
                 // check for being url parameter
-                $response = $this->getUrlParm($regRouteL[$index]);
-                if($response['isUrlParm'] == false)
+                $urlParmResponse = $this->getUrlParm($regRouteL[$index]);
+                if($urlParmResponse['isUrlParm'] == false)
                     return $response;
                 
                 // assign parameter
-                 if($this->checkType($response['type'], $reqRouteL[$index])){
-                     $urlParms[$response['varName']] = $reqRouteL[$index];
+                 if($this->checkType($urlParmResponse['type'], $reqRouteL[$index])){
+                     $urlParms[$urlParmResponse['varName']] = $reqRouteL[$index];
                  }
 
                  // else U should abort.
@@ -162,10 +162,11 @@ class Router
 
         /**
          * we need to inject data into the called controller !!!
+         * we can do this using call_user_func_array method
          */
-
+        //print_r($parms);
         // call the controller in the charge
-        $controllerObj = new $class(); //new \Mvc\Controllers\Users();
+        $controllerObj = new $class($actionParms); //new \Mvc\Controllers\Users();
         $controllerObj->$action();
     }
 

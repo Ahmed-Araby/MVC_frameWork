@@ -97,3 +97,15 @@ include_once __DIR__ . "\..\autoload.php";
 this allow you to include the path always relative to the absolute path of the 
 calling file.
 
+
+__call() magic method
+this method will be called when we call private or non exist method 
+
+
+
+htmlspecialchars("") --- will scape special characters and  print the string as plain text 
+not html parising will be applied.
+
+
+
+call_user_func_array --- call a method with paramters as array 

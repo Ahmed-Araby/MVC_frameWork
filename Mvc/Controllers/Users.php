@@ -2,33 +2,68 @@
 
 
 namespace Mvc\Controllers;
+use Core\View;
+
 require_once __DIR__ . "\\..\\..\\autoload.php";
-class Users
+require_once __DIR__ . "\\..\\..\\vendor\\autoload.php";
+
+class Users extends \Core\Controller
 {
-
-    function __construct()
-    {
-        echo "users class is instinated <br>";
-        return ;
-    }
-
     /**
      * define crud methods
      */
-    function getUsers()
+
+    function __call($method, $args){
+        $allowed = $this->before();
+        if(is_callable([$this, $method]) && $allowed){
+            
+            call_user_func_array([$this, $method], $args);
+        }
+        $this->after();
+    }
+
+    private function before()
+    {
+        echo "before";
+        echo "<br>";
+        return true;
+    } 
+    private function after()
+    {
+        echo "after";
+        echo "<br>";
+        return true;
+    }
+    
+    private function getUsers()
     {
         /**
          * will probably need to use pagination
          */
         echo "getUSers inside users class <br> <br>";
+        
+        /*
+        $viewObj = new View();
+        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
+        */
+
+        // using twig template engine.
+        $pathToTemplates = __DIR__ . "\\..\\Views";
+
+        $loader = new \Twig\Loader\FilesystemLoader($pathToTemplates);
+        $twig = new \Twig\Environment($loader);
+        echo $twig->render('index.html', $this->parms);
+
     }
 
-    function getUser()
+    private function getUser()
     {
         echo "getUser inside users class <br> <br>";
+        $viewObj = new View();
+        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
     }
 
-    function postUser()
+    private function postUser()
     {
         /**
          * there is 2 ways to get the data 
@@ -37,16 +72,22 @@ class Users
          *      router class --- which would be like dependency injection.
         */
         echo "postUser inside users class <br> <br>";
+        $viewObj = new View();
+        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
     }
 
-    function deleteUser()
+    private function deleteUser()
     {
         echo "deleteUser inside users class <br> <br>";
+        $viewObj = new View();
+        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
     }
 
-    function updateUser()
+    private function updateUser()
     {
         echo "updateUser inside users class <br> <br>";
+        $viewObj = new View();
+        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
     }
 
 

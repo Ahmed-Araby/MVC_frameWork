@@ -27,7 +27,7 @@ $router = new Core\Router();
 
 // register get routes 
 $router->get('/users/int:id/color/int:age', ["controller" => "\\Mvc\\Controllers\\Users",
-                                "action" =>"getUser"]);
+                                "action" =>"getUsers"]);
 
 $router->get('/users', ["controller" => "Mvc\\Controllers\\Users",
                                 "action" =>"postUser"]);
