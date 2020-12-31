@@ -3,15 +3,13 @@
 function autoload($className)
 {
     
-    /*
     echo "class name " . $className;
-    echo "<br>";
-    */
+    echo "\n";
 
     $className = str_replace("/", "\\", $className);
     $filePath = __DIR__ . "\\" . $className . ".php";
     
- 
+    echo $filePath;
 
     require_once $filePath;
 }

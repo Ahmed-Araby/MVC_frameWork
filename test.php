@@ -4,5 +4,6 @@
  * is_callable
  */
 
-$x = 22;
-require "test2.php";
+require_once "vendor\autoload.php";
+
+$obj = toy\toy::fun();

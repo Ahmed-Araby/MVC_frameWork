@@ -150,3 +150,12 @@ composer dump-autoload -->>> to update the autoload file of composer.
 
 namespaces are making use of the restrection of the os that no 2 files have the 
 same name in the same folder.
+
+
+
+adding \ at the beginig of class in using namespace work as 
+hint for php to not prepend the class name with the namespace decleared in this file.
+
+
+for composer to work with my classes I have to give namespace for each class 
+then map the namespave to the directory where my class file exist.
