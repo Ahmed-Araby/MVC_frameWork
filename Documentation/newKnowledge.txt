@@ -109,3 +109,40 @@ not html parising will be applied.
 
 
 call_user_func_array --- call a method with paramters as array 
+
+
+
+
+# composer:
+
+* composer install -- will download the libriries we need and mentioned in 
+        composer.json 
+
+* composer requrie "lib info "   -- will download and add it to composer.json/require field
+
+
+
+each package have it's own autoloader 
+
+composer can auto load what ever was installed with it -- I believe composer does this 
+by mapping as there is no such geneeric way, also the package don't make namespaces 
+corresponding to the file paths.
+
+my auto load is not generic loader
+
+
+
+# autoloading my own classes with composer:
+{
+        "autoload":{
+                "classmap":{
+                        "here is the file path that would be automatically included", 
+                        ""
+                }
+        }
+}
+
+- psr-4 (map namespace to path in the file system relative to the root of the project )
+- classmap
+
+composer dump-autoload -->>> to update the autoload file of composer.

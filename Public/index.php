@@ -21,8 +21,8 @@ foreach($_SERVER as $key => $value)
 }
 */
 
-require_once __DIR__ . "/../autoload.php";
-
+//require_once __DIR__ . "/../autoload.php";
+require_once __DIR__ . "\\..\\vendor\\autoload.php";
 $router = new Core\Router();
 
 // register get routes 

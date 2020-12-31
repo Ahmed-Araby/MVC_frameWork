@@ -4,7 +4,8 @@
 namespace Mvc\Controllers;
 use Core\View;
 
-require_once __DIR__ . "\\..\\..\\autoload.php";
+//require_once __DIR__ . "\\..\\..\\autoload.php";
+require_once __DIR__ . "\\..\\..\\vendor\\autoload.php";
 
 class Users extends \Core\Controller
 {
@@ -43,13 +44,14 @@ class Users extends \Core\Controller
         
         
         $viewObj = new View();
+        var_dump($viewObj);
         
-        /*
+        
         $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
-        */
+        
 
         // using twig template engine.
-        $viewObj->twigRender("home.html", $this->parms);
+        //$viewObj->twigRender("home.html", $this->parms);
 
 
     }
