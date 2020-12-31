@@ -39,21 +39,24 @@ class Users extends \Core\Controller
     {
         /**
          * will probably need to use pagination
+         * we have all the parameters in $this->parms -- property of the parent class
          */
-        echo "getUSers inside users class <br> <br>";
-        
-        
-        $viewObj = new View();
-        var_dump($viewObj);
-        
-        
-        $viewObj->render("UsersViews\\UsersHomePage.php", $this->parms);
-        
 
+
+        echo "getUSers method inside users class <br> <br>";
+        
+        $userModelObj = new \Mvc\Models\UsersModel();
+        $viewObj = new View();
+
+        $resSet = $userModelObj->getUsers();
+        $users = [];
+        while($row = $resSet->fetch())
+            $users[] = $row;
+        // redner using the twig template.
+        $viewObj->render("UsersViews\\UsersHomePage.php", ["users"=>$users]);
+    
         // using twig template engine.
         //$viewObj->twigRender("home.html", $this->parms);
-
-
     }
 
     private function getUser()

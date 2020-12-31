@@ -146,3 +146,7 @@ my auto load is not generic loader
 - classmap
 
 composer dump-autoload -->>> to update the autoload file of composer.
+
+
+namespaces are making use of the restrection of the os that no 2 files have the 
+same name in the same folder.

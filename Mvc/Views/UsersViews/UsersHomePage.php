@@ -1,13 +1,10 @@
 <?php 
 
 echo "user Home page";
-
 echo "<br>";
-echo $id;
-
 echo "<br>";
-echo $age;
 
-
-
-echo "<br>";
+foreach($users as $user){
+    print_r($user);
+    echo "<br>";
+}

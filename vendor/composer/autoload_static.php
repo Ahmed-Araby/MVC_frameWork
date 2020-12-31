@@ -23,7 +23,6 @@ class ComposerStaticInit88d6de5bf68b5e473b864a4ac3961a1c
         ),
         'M' => 
         array (
-            'Mvc\\Controllers\\' => 16,
             'Mvc\\' => 4,
         ),
         'C' => 
@@ -44,10 +43,6 @@ class ComposerStaticInit88d6de5bf68b5e473b864a4ac3961a1c
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-        ),
-        'Mvc\\Controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Mvc/Controllers',
         ),
         'Mvc\\' => 
         array (
