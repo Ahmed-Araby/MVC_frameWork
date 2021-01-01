@@ -1,0 +1,9 @@
+[01-Jan-2021 17:40:00 Europe/Berlin] Exception: bad php in C:\xampp\htdocs\MVC_frameWork\test.php:26
+Stack trace:
+#0 {main}
+[01-Jan-2021 17:40:10 Europe/Berlin] Exception: bad php in C:\xampp\htdocs\MVC_frameWork\test.php:26
+Stack trace:
+#0 {main}
+[01-Jan-2021 17:40:11 Europe/Berlin] Exception: bad php in C:\xampp\htdocs\MVC_frameWork\test.php:26
+Stack trace:
+#0 {main}

@@ -159,3 +159,20 @@ hint for php to not prepend the class name with the namespace decleared in this 
 
 for composer to work with my classes I have to give namespace for each class 
 then map the namespave to the directory where my class file exist.
+
+
+php have configurations to hide and show errors, 
+and to restrict the amount of the memory to use.
+
+all this configurations are located in the php.ini file.
+phpinfo() --- render web page with some configuration 
+info .
+--- loded configureation file entry in the page 
+tell us about the location of php.ini 
+
+change the configs 
+on the file -- affect the whole server 
+on code -- affect the script that hold this code.
+
+
+we can set the http code which the server will return.

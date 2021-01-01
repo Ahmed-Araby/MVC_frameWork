@@ -1,5 +1,7 @@
 <?php 
 
+namespace config;
+
 class config 
 {
     // data base configuration
@@ -10,7 +12,9 @@ class config
     const pass = "";
 
 
-    // ... configs.
+    // exception mode 
+    const showException = false;
+    const logFile = "Logs\\errorLog.txt";
 
 }
 

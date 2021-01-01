@@ -16,6 +16,10 @@ class ComposerStaticInit88d6de5bf68b5e473b864a4ac3961a1c
         array (
             'toy\\' => 4,
         ),
+        'c' => 
+        array (
+            'config\\' => 7,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -37,6 +41,10 @@ class ComposerStaticInit88d6de5bf68b5e473b864a4ac3961a1c
 
     public static $prefixDirsPsr4 = array (
         'toy\\' => 
+        array (
+            0 => '/',
+        ),
+        'config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
         ),
